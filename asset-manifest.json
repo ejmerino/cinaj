@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/cinaj/static/css/main.f5b92d8c.css",
+    "main.js": "/cinaj/static/js/main.a7156719.js",
+    "static/media/jovenes-leyendo.png": "/cinaj/static/media/jovenes-leyendo.9739e67e6fd82c5876d3.png",
+    "static/media/grupal2.png": "/cinaj/static/media/grupal2.debbdf7c44a1603e0fa3.png",
+    "static/media/grupal1.png": "/cinaj/static/media/grupal1.99f9819f60bd41b8da73.png",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/cinaj/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fa-solid-900.ttf": "/cinaj/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/fa-brands-400.ttf": "/cinaj/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fontawesome-webfont.eot": "/cinaj/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/cinaj/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fa-solid-900.woff2": "/cinaj/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/cinaj/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/cinaj/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/cinaj/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/fa-regular-400.ttf": "/cinaj/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/logo-ups.png": "/cinaj/static/media/logo-ups.df145747d899f6f80c6e.png",
+    "static/media/logo-ups-blanco.png": "/cinaj/static/media/logo-ups-blanco.cd36d6d6154c5f772517.png",
+    "static/media/fa-regular-400.woff2": "/cinaj/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/cinaj/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/cinaj/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/cinaj/index.html",
+    "main.f5b92d8c.css.map": "/cinaj/static/css/main.f5b92d8c.css.map",
+    "main.a7156719.js.map": "/cinaj/static/js/main.a7156719.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5b92d8c.css",
+    "static/js/main.a7156719.js"
+  ]
+}
