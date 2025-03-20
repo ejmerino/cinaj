@@ -72,15 +72,16 @@ const Home = () => {
             <section className="image-text-container" ref={imageTextRef1}>
                 <img src={grupal1} alt="Investigadores CINAJ" className="image-large" />
                 <div className="text-box">
-                    <h2>Objetivos</h2>
-                    Producir conocimientos para posibilitar, mediante la participación de instancias y 
-                    organismos institucionales así como de diversas formas asociativas, el desarrollo de 
-                    niños, niñas, adolescentes y jóvenes bajo los principios humanistas que orientan la 
-                    misión de la UPS Ecuador y de los ejes contemplados en el Plan Nacional del Buen Vivir.          
+                    <h2 className="section-subtitle">Objetivos</h2>
+                    <p className="objetive-text">
+                    Producir conocimientos para posibilitar, mediante la participación de instancias y organismos institucionales 
+                    así como de diversas formas asociativas, el desarrollo de niños, niñas, adolescentes y jóvenes bajo los principios 
+                    humanistas que orientan la misión de la UPS Ecuador y de los ejes contemplados en el Plan Nacional del Buen Vivir.
+                    </p>         
                     <ul className="objective-list">
-                      <li>Producir conocimientos sobre los procesos de socialización de niños, niñas, adolescentes y jóvenes en diversos ámbitos como familia, escuela, política, pantallas y redes sociales.</li>
-                      <li>Investigar la relación de la niñez y juventud con el ciberespacio y comunidades virtuales.</li>
-                      <li>Analizar la compleja relación entre infancia y trabajo en el contexto de los cambios globales del mercado laboral.</li>
+                      <li>Producir conocimientos acerca del conjunto de relaciones e interacciones que la niñez y la juventud desarrollan en sus prácticas frente a las pantallas, el ciberespacio y comunidades virtuales.</li>
+                      <li>Producir conocimientos socialmente útiles sobre la compleja relación entre infancia y trabajo en el marco general de los cambios y transformaciones del mundo del trabajo y del mercado laboral a nivel global, regional, nacional y local.</li>
+                      <li>Producir conocimientos acerca de la producción social de violencias estructurales y nuevas violencias situando como sujeto central de interés a niños, niñas, adolescentes y jóvenes.</li>
                       <li>Estudiar la producción social de violencias estructurales y nuevas violencias, enfocándose en niños, niñas, adolescentes y jóvenes.</li>
                       <li>Producir conocimientos sobre la relación entre jóvenes y política.</li>
                     </ul>
@@ -107,7 +108,7 @@ const Home = () => {
                         <ul className="research-list">
                             <li>Socialización y subjetividades infantil y juvenil</li>
                             <li>Participación social y política de niños y jóvenes</li>
-                            <li>Desigualdades, ciudadanía e interculturalidad</li>
+                            <li>Desigualdades, ciudadanía e interculturalidad en perspectiva intergeneracional</li>
                         </ul>
                     </div>
                 </div>
