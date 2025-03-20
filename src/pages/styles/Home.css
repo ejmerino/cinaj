@@ -93,6 +93,11 @@
 
 .image-text-container.reverse {
   flex-direction: row-reverse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 60px 10%;
 }
 
 .image-large {
@@ -202,6 +207,10 @@
   .image-text-container {
     flex-direction: column;
     text-align: center;
+  }
+
+  .image-text-container.reverse {
+    flex-direction: column; /* Aquí se ajusta la dirección de los elementos para pantallas pequeñas */
   }
 
   .image-large {
