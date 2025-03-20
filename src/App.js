@@ -8,6 +8,8 @@ import NiñosJóvenes from './pages/NinosJovenes'; // Nuevo componente para Niñ
 import Instituciones from './pages/Instituciones';
 import Noticias from './pages/Noticias';
 import Contactos from './pages/Contactos';
+import Footer from './components/Footer'; // Importamos el Footer
+
 
 const App = () => {
   return (
@@ -21,6 +23,7 @@ const App = () => {
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/contactos" element={<Contactos />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

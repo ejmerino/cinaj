@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'; // Importar desde 'react-dom/client' pa
 import './index.css'; // Estilos CSS
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importación de Bootstrap
+import 'font-awesome/css/font-awesome.min.css';
+
 
 // Crear el "root" de la aplicación
 const root = ReactDOM.createRoot(document.getElementById('root'));
