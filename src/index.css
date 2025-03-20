@@ -3,6 +3,7 @@ body {
   background-color: #f4f4f4;
   font-family: 'Arial', sans-serif;
   margin: 0;
+  font-size: 1rem; /* Ajuste global */
 }
 
 /* Títulos */
@@ -27,7 +28,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* Añadir margenes personalizados */
+/* Añadir márgenes personalizados */
 .mt-5 {
   margin-top: 3rem;
 }
