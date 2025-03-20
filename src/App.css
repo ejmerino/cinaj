@@ -1,38 +1,16 @@
-.App {
-  text-align: center;
+/* Estilos CSS para la barra de navegación (puedes ponerlo en App.css o en un archivo CSS separado) */
+.navbar {
+  transition: all 0.3s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-nav .nav-link {
+  transition: color 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Color de hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-nav .nav-item {
+  margin-right: 15px;
 }
