@@ -11,11 +11,13 @@ const Footer = () => {
       <div className="footer-content">
         {/* Logo */}
         <div className="footer-logo">
-          <img
-            src={logo} // Ruta del logo
-            alt="Logo CINAJ"
-            className="footer-logo-img"
-          />
+          <a href="https://www.ups.edu.ec/" target="_blank" rel="noopener noreferrer">
+            <img
+              src={logo}
+              alt="Logo CINAJ"
+              className="footer-logo-img"
+            />
+          </a>
         </div>
 
         {/* Redes Sociales */}
