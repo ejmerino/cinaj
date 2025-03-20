@@ -1,47 +1,169 @@
-/* home.css */
 .hero-section {
-    position: relative;
-    height: 100vh; /* Asegura que la sección ocupe toda la altura de la pantalla */
-    width: 100%;
-    overflow: hidden; /* Evita que la imagen se desborde */
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-section .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  z-index: 2;
+}
+
+/* Sección de Introducción */
+.content-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003772;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sección de Imagen + Texto */
+.image-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 10%;
+}
+
+.image-text-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-large {
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-large:hover {
+  transform: scale(1.05);
+}
+
+.text-box {
+  width: 40%;
+}
+
+.text-box h2 {
+  font-size: 1.8rem;
+  color: #003772;
+  font-weight: bold;
+}
+
+.text-box p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* Sección de Coordinador y Contacto */
+.coordinator-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.coordinator-title,
+.contact-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #003772;
+}
+
+.coordinator-name,
+.contact-email {
+  font-size: 1.3rem;
+  color: #444;
+}
+
+.contact-email a {
+  color: #003772;
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  text-decoration: underline;
+}
+
+/* Sección de Líneas de Investigación */
+.research-lines {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.research-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #003772;
+}
+
+.research-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* Animaciones */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra toda la sección */
-    filter: brightness(1); /* Imagen completamente visible al principio */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .hero-section .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0); /* La capa oscura empieza transparente */
-    z-index: 1; /* Asegura que esté por encima de la imagen */
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .image-text-container {
+    flex-direction: column;
     text-align: center;
-    color: white;
-    z-index: 2; /* El texto se mantiene encima de la capa oscura */
   }
-  
-  .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+
+  .image-large {
+    width: 90%;
   }
-  
-  .hero-text p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+
+  .text-box {
+    width: 90%;
   }
-  
+}

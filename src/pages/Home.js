@@ -1,47 +1,119 @@
-import React, { useState, useEffect } from 'react';
-import './styles/Home.css'; // Asegúrate de que la ruta de tu archivo CSS sea correcta
+import React, { useState, useEffect, useRef } from "react";
+import "./styles/Home.css";
+import grupal1 from "../assets/fotos/grupal1.png";
+import grupal2 from "../assets/fotos/grupal2.png";
 
 const Home = () => {
-  const [opacity, setOpacity] = useState(0); // Inicializamos la opacidad en 0 (imagen completamente visible)
+    const [opacity, setOpacity] = useState(0);
+    const introRef = useRef(null);
+    const imageTextRef1 = useRef(null);
+    const imageTextRef2 = useRef(null);
+    const coordinatorRef = useRef(null);
+    const researchRef = useRef(null);
 
-  // Función para manejar el scroll
-  const handleScroll = () => {
-    const scrollY = window.scrollY; // Distancia de scroll
-    const opacityValue = Math.min(scrollY / 300, 0.7); // A medida que se hace scroll, se oscurece más (máximo 0.7 de opacidad)
-    setOpacity(opacityValue); // Actualiza el estado de opacidad
-  };
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const opacityValue = Math.min(scrollY / 400, 0.7);
+        setOpacity(opacityValue);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+        const fadeInElements = [
+            { ref: introRef, threshold: 0.7 },
+            { ref: imageTextRef1, threshold: 0.7 },
+            { ref: imageTextRef2, threshold: 0.7 },
+            { ref: coordinatorRef, threshold: 0.7 },
+            { ref: researchRef, threshold: 0.7 },
+        ];
 
-    // Limpiar el event listener cuando el componente se desmonte
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+        fadeInElements.forEach(({ ref, threshold }) => {
+            if (ref.current) {
+                const elementTop = ref.current.getBoundingClientRect().top;
+                const elementVisible = elementTop - window.innerHeight < threshold;
+                ref.current.classList.toggle("fade-in", elementVisible);
+            }
+        });
     };
-  }, []);
 
-  return (
-    <div>
-      {/* Sección de la imagen con opacidad dinámica */}
-      <div className="hero-section">
-        <div className="hero-overlay" style={{ opacity: opacity }}></div> {/* Capa oscura */}
-        <img
-          src={require('../assets/fotos/jovenes-leyendo.png')} // Verifica si la ruta es correcta
-          alt="Jóvenes leyendo"
-          className="hero-image"
-          style={{ filter: `brightness(${1 - opacity})` }} // Cambia el brillo con el scroll
-        />
-        <div className="hero-text">
-          <h1>Bienvenidos a CINAJ</h1>
-          <p>Este es un texto de prueba para mostrar la funcionalidad.</p>
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    return (
+        <div>
+            {/* Hero Section */}
+            <div className="hero-section">
+                <div className="hero-overlay" style={{ opacity }}></div>
+                <img
+                    src={require("../assets/fotos/jovenes-leyendo.png")}
+                    alt="Jóvenes leyendo"
+                    className="hero-image"
+                    style={{ filter: `brightness(${1 - opacity * 0.6})` }}
+                />
+                <div className="hero-text">
+                </div>
+            </div>
+
+            {/* Introduction */}
+            <section className="container content-section" ref={introRef}>
+                <h1 className="section-title">Grupo de Investigación sobre Niñez, Adolescencia y Juventud - CINAJ</h1>
+                <p className="intro-text">
+                El Grupo de Investigación sobre Niñez, Adolescencia y Juventud (CINAJ) fue creado el 
+          <strong> 20 de enero de 2010 </strong> por Resolución de Rectorado UPS, con el objetivo de 
+          producir conocimiento acerca de la compleja realidad de la que forman parte niños/as 
+          y jóvenes a partir del reconocimiento de sus condiciones específicas en tanto sujetos 
+          concretamente situados.
+                </p>
+            </section>
+
+            {/* Image + Text Sections */}
+            <section className="image-text-container" ref={imageTextRef1}>
+                <img src={grupal1} alt="Investigadores CINAJ" className="image-large" />
+                <div className="text-box">
+                    <h2>Objetivos</h2>
+                    Producir conocimientos para posibilitar, mediante la participación de instancias y 
+                    organismos institucionales así como de diversas formas asociativas, el desarrollo de 
+                    niños, niñas, adolescentes y jóvenes bajo los principios humanistas que orientan la 
+                    misión de la UPS Ecuador y de los ejes contemplados en el Plan Nacional del Buen Vivir.          
+                    <ul className="objective-list">
+                      <li>Producir conocimientos sobre los procesos de socialización de niños, niñas, adolescentes y jóvenes en diversos ámbitos como familia, escuela, política, pantallas y redes sociales.</li>
+                      <li>Investigar la relación de la niñez y juventud con el ciberespacio y comunidades virtuales.</li>
+                      <li>Analizar la compleja relación entre infancia y trabajo en el contexto de los cambios globales del mercado laboral.</li>
+                      <li>Estudiar la producción social de violencias estructurales y nuevas violencias, enfocándose en niños, niñas, adolescentes y jóvenes.</li>
+                      <li>Producir conocimientos sobre la relación entre jóvenes y política.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className="image-text-container reverse" ref={imageTextRef2}>
+                <img src={grupal2} alt="Equipo CINAJ" className="image-large" />
+                <div className="text-box">
+                    {/* Coordinator & Contact */}
+                    <div className="coordinator-section" ref={coordinatorRef}>
+                        <h2 className="section-subtitle">Coordinador</h2>
+                        <p className="coordinator-name">Dr. Carlos Rene Unda, Ph.D.</p>
+
+                        <h2 className="section-subtitle">Contacto</h2>
+                        <p className="contact-email">
+                            <a href="mailto:cunda@ups.edu.ec">cunda@ups.edu.ec</a>
+                        </p>
+                    </div>
+
+                    {/* Research Areas */}
+                    <div className="research-lines" ref={researchRef}>
+                        <h2 className="section-subtitle">Líneas de Investigación</h2>
+                        <ul className="research-list">
+                            <li>Socialización y subjetividades infantil y juvenil</li>
+                            <li>Participación social y política de niños y jóvenes</li>
+                            <li>Desigualdades, ciudadanía e interculturalidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
-      <div className="container mt-4">
-        <h1>Contenido Principal</h1>
-        {/* Otros componentes o contenido */}
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Home;
