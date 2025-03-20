@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cinaj/static/css/main.f5b92d8c.css",
-    "main.js": "/cinaj/static/js/main.a7156719.js",
+    "main.js": "/cinaj/static/js/main.2a32fcca.js",
     "static/media/jovenes-leyendo.png": "/cinaj/static/media/jovenes-leyendo.9739e67e6fd82c5876d3.png",
     "static/media/grupal2.png": "/cinaj/static/media/grupal2.debbdf7c44a1603e0fa3.png",
     "static/media/grupal1.png": "/cinaj/static/media/grupal1.99f9819f60bd41b8da73.png",
@@ -22,10 +22,10 @@
     "static/media/fa-v4compatibility.woff2": "/cinaj/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/cinaj/index.html",
     "main.f5b92d8c.css.map": "/cinaj/static/css/main.f5b92d8c.css.map",
-    "main.a7156719.js.map": "/cinaj/static/js/main.a7156719.js.map"
+    "main.2a32fcca.js.map": "/cinaj/static/js/main.2a32fcca.js.map"
   },
   "entrypoints": [
     "static/css/main.f5b92d8c.css",
-    "static/js/main.a7156719.js"
+    "static/js/main.2a32fcca.js"
   ]
 }
