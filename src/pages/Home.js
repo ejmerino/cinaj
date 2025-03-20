@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import NavbarComponent from '../components/Navbar'; // Asegúrate de tener el Navbar en la ruta correcta
 import './styles/Home.css'; // Asegúrate de que la ruta de tu archivo CSS sea correcta
 
 const Home = () => {
@@ -23,7 +22,6 @@ const Home = () => {
 
   return (
     <div>
-      <NavbarComponent />
       {/* Sección de la imagen con opacidad dinámica */}
       <div className="hero-section">
         <div className="hero-overlay" style={{ opacity: opacity }}></div> {/* Capa oscura */}

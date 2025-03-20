@@ -8,12 +8,15 @@ import NiñosJóvenes from './pages/NinosJovenes'; // Nuevo componente para Niñ
 import Instituciones from './pages/Instituciones';
 import Noticias from './pages/Noticias';
 import Contactos from './pages/Contactos';
-import Footer from './components/Footer'; // Importamos el Footer
+import Footer from './components/Footer'; 
+import Navbar from './components/Navbar';
+//import { Navbar } from 'react-bootstrap';
 
 
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quienes-somos" element={<QuiénesSomos />} />
